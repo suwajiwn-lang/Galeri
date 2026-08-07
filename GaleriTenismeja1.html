@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri Tenis Meja — Dokumentasi Turnamen & Komunitas</title>
+<meta name="description" content="Arsip foto tenis meja dari berbagai turnamen, latihan, dan kegiatan komunitas. Klik foto untuk memperbesar.">
+<meta property="og:title" content="Galeri Tenis Meja — Dokumentasi Lapangan">
+<meta property="og:description" content="Koleksi foto tenis meja — turnamen, latihan, dan kebersamaan tim.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageGallery","name":"Galeri Tenis Meja","description":"Arsip dokumentasi tenis meja dari berbagai turnamen dan kegiatan komunitas."}
+</script>
+<style>
+/* ============ 1. TOKENS & RESET ============ */
+:root{
+  --ink:#12130F; --ink2:#181A13; --ink3:#20231A; --line:#2C2F25;
+  --paper:#F2EEE3; --mut:#9A9A8C; --dim:#6E6F62;
+  --yel:#FFC53D; --red:#FF4D2E; --teal:#3DD6A3; --blu:#8AB8FF;
+  --disp:'Bricolage Grotesque',sans-serif; --body:'Instrument Sans',sans-serif; --mono:'Space Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.mono{font-family:var(--mono);letter-spacing:.08em}
+.wrap{width:min(1240px,94%);margin-inline:auto}
+::selection{background:var(--yel);color:var(--ink)}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}::-webkit-scrollbar-thumb:hover{background:var(--yel)}
+:focus-visible{outline:2px solid var(--yel);outline-offset:3px}
+
+/* ============ 2. TICKER ============ */
+.ticker{background:var(--yel);color:var(--ink);overflow:hidden;border-bottom:1px solid var(--ink)}
+.ticker-track{display:flex;gap:2.5rem;width:max-content;padding:.45rem 0;font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;animation:tick 26s linear infinite}
+.ticker-track span{white-space:nowrap}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ============ 3. MASTHEAD ============ */
+.masthead{padding:clamp(2.4rem,6vw,4.5rem) 0 clamp(1.6rem,4vw,3rem);display:grid;grid-template-columns:1.6fr .9fr;gap:2.5rem;align-items:end;border-bottom:1px solid var(--line)}
+.kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;color:var(--mut);text-transform:uppercase;margin-bottom:1.1rem;display:flex;align-items:center;gap:.6rem}
+.kicker::before{content:"";width:34px;height:1px;background:var(--red)}
+h1.big{font-family:var(--disp);font-weight:800;text-transform:uppercase;line-height:.92;font-size:clamp(2.9rem,8.4vw,6.6rem);letter-spacing:-.02em}
+h1.big .l2{color:transparent;-webkit-text-stroke:1.5px var(--paper);display:block}
+h1.big .spark{color:var(--red);-webkit-text-stroke:0}
+.mask{display:block;overflow:hidden}
+.mask>span{display:block;transform:translateY(115%);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.mask:nth-child(2)>span{animation-delay:.12s}
+@keyframes rise{to{transform:translateY(0)}}
+.lede{max-width:52ch;color:var(--mut);margin-top:1.3rem;font-size:1.02rem}
+.lede strong{color:var(--paper)}
+.mast-side{display:flex;flex-direction:column;gap:1.4rem;align-items:flex-end}
+.stats{width:100%;max-width:280px;font-family:var(--mono);font-size:.8rem}
+.stats div{display:flex;justify-content:space-between;padding:.55rem 0;border-bottom:1px dashed var(--line)}
+.stats div span:first-child{color:var(--dim);letter-spacing:.14em}
+.stats div span:last-child{color:var(--yel);font-weight:700}
+.badge{width:112px;height:112px;position:relative;flex:none;animation:spin 16s linear infinite}
+.badge svg{width:100%;height:100%}
+.badge text{font-family:var(--mono);font-size:11px;letter-spacing:2.6px;fill:var(--yel)}
+.badge b{position:absolute;inset:0;display:grid;place-items:center;font-size:1.5rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ============ 4. FILMSTRIP ============ */
+.film{border-bottom:1px solid var(--line);background:var(--ink2);padding:.35rem 0;overflow:hidden}
+.film .holes{height:9px;background-image:radial-gradient(circle,var(--yel) 2px,transparent 2.6px);background-size:18px 9px;opacity:.4;margin:2px 0}
+.film-track{display:flex;gap:12px;width:max-content;animation:slide 38s linear infinite;padding:4px 0}
+.film:hover .film-track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.frame{border:1px solid var(--line);padding:3px;background:var(--ink3);transition:transform .35s,border-color .35s}
+.frame img{height:82px;width:122px;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.frame:nth-child(odd){transform:rotate(.6deg)}
+.frame:nth-child(even){transform:rotate(-.6deg)}
+.frame:hover{transform:rotate(0) scale(1.07);border-color:var(--yel);z-index:2}
+
+/* ============ 5. TOOLBAR ============ */
+.toolbar{position:sticky;top:0;z-index:40;background:rgba(18,19,15,.92);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.toolbar-in{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;padding:.8rem 0}
+.chips{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;padding:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:flex;align-items:center;gap:.5rem;padding:.5rem .95rem;border:1px solid var(--line);border-radius:99px;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--mut);transition:all .25s}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--cc,var(--paper));transition:transform .25s}
+.chip em{font-style:normal;color:var(--dim)}
+.chip:hover{border-color:var(--paper);color:var(--paper);transform:translateY(-1px)}
+.chip:hover .dot{transform:scale(1.5)}
+.chip.is-on{background:var(--yel);border-color:var(--yel);color:var(--ink);font-weight:700}
+.chip.is-on .dot{background:var(--ink)}
+.chip.is-on em{color:rgba(18,19,15,.6)}
+.search{margin-left:auto;position:relative;display:flex;align-items:center}
+.search svg{position:absolute;left:.85rem;width:15px;height:15px;stroke:var(--dim);pointer-events:none}
+.search input{background:var(--ink3);border:1px solid var(--line);border-radius:99px;color:var(--paper);font-family:var(--mono);font-size:.8rem;padding:.6rem 2.4rem .6rem 2.4rem;width:min(260px,58vw);transition:border-color .25s,box-shadow .25s}
+.search input::placeholder{color:var(--dim)}
+.search input:focus{outline:none;border-color:var(--yel);box-shadow:0 0 0 3px rgba(255,197,61,.15)}
+.search .clr{position:absolute;right:.5rem;width:22px;height:22px;border-radius:50%;display:none;place-items:center;font-size:.85rem;color:var(--dim)}
+.search .clr:hover{background:var(--line);color:var(--paper)}
+.search.has .clr{display:grid}
+
+/* ============ 6. GRID & KARTU ============ */
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin:2.4rem 0 1.4rem;border-bottom:2px solid var(--line);padding-bottom:.8rem}
+.sec-head h2{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(1.4rem,3vw,2.1rem);letter-spacing:-.01em}
+.sec-head .mono{font-size:.7rem;color:var(--dim);letter-spacing:.2em}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.8vw,22px);padding-bottom:2rem}
+.card{position:relative;background:var(--ink2);border:1px solid var(--line);cursor:zoom-in;opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s}
+.card.in{opacity:1;transform:translateY(0)}
+.card:hover{border-color:var(--yel);box-shadow:0 14px 34px rgba(0,0,0,.5)}
+.ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(110deg,var(--ink3) 30%,#282b20 50%,var(--ink3) 70%);background-size:200% 100%;animation:shimmer 1.6s linear infinite}
+@keyframes shimmer{to{background-position:-200% 0}}
+.ph img{width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.02);transition:opacity .6s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.ph img.ok{opacity:1}
+.card:hover .ph img{transform:scale(1.07)}
+.num{position:absolute;top:.6rem;left:.6rem;z-index:2;font-family:var(--mono);font-size:.66rem;background:var(--ink);border:1px solid var(--line);padding:.2rem .5rem;color:var(--mut);opacity:0;transform:translateY(-6px);transition:.3s}
+.card:hover .num{opacity:1;transform:translateY(0);color:var(--yel);border-color:var(--yel)}
+.tag{position:absolute;top:.6rem;right:.6rem;z-index:2;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;background:rgba(18,19,15,.82);border:1px solid var(--cc);color:var(--cc);padding:.22rem .55rem;border-radius:99px}
+.grad{position:absolute;inset:auto 0 0 0;height:72%;background:linear-gradient(transparent,rgba(10,11,8,.94));opacity:0;transition:opacity .35s;pointer-events:none}
+.card:hover .grad{opacity:1}
+.ov{position:absolute;left:0;right:0;bottom:0;padding:.9rem 1rem;transform:translateY(12px);opacity:0;transition:.35s .05s;pointer-events:none}
+.card:hover .ov{transform:translateY(0);opacity:1}
+.ov strong{display:block;font-family:var(--disp);font-weight:700;font-size:1.05rem;line-height:1.25;margin-bottom:.3rem}
+.ov .meta{display:flex;gap:.6rem;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;color:var(--mut);letter-spacing:.08em}
+.ov .meta span{display:inline-flex;align-items:center;gap:.25rem}
+.ov .meta span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--yel);opacity:.7}
+
+/* ============ 7. EMPTY / COUNT / PAGER ============ */
+.meta-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:.9rem 0;border-top:1px dashed var(--line);font-family:var(--mono);font-size:.72rem;color:var(--dim);letter-spacing:.1em}
+.pager{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:center;padding:1.6rem 0 3rem}
+.pg{min-width:42px;height:42px;padding:0 .8rem;display:grid;place-items:center;border:1px solid var(--line);font-family:var(--mono);font-size:.8rem;color:var(--mut);transition:.25s}
+.pg:hover:not(:disabled){border-color:var(--yel);color:var(--yel);transform:translateY(-2px)}
+.pg.is-cur{background:var(--yel);border-color:var(--yel);color:var(--ink);font-weight:700}
+.pg:disabled{opacity:.3;cursor:default}
+.pg-gap{display:grid;place-items:center;color:var(--dim);padding:0 .2rem}
+.empty{text-align:center;padding:4rem 1rem;display:none}
+.empty.show{display:block}
+.empty .big-e{font-size:3rem;display:block;margin-bottom:.8rem;animation:spin 8s linear infinite}
+.empty h3{font-family:var(--disp);font-size:1.6rem;text-transform:uppercase}
+.empty p{color:var(--mut);margin:.5rem 0 1.2rem}
+.reset-btn{border:1px solid var(--yel);color:var(--yel);padding:.6rem 1.4rem;font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;transition:.25s}
+.reset-btn:hover{background:var(--yel);color:var(--ink)}
+
+/* ============ 8. FOOTER ============ */
+footer{border-top:1px solid var(--line);background:var(--ink2);padding:3rem 0 1.6rem}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2.5rem}
+.foot-grid h4{font-family:var(--disp);text-transform:uppercase;font-size:.95rem;letter-spacing:.04em;margin-bottom:.9rem;color:var(--yel)}
+.foot-grid p,.foot-grid li{color:var(--mut);font-size:.88rem}
+.foot-grid ul{list-style:none}
+.foot-grid li{padding:.25rem 0}
+.code-hint{background:var(--ink);border:1px dashed var(--line);padding:.9rem;font-family:var(--mono);font-size:.68rem;line-height:1.8;color:var(--teal);overflow-x:auto}
+.copyright{margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.68rem;color:var(--dim);letter-spacing:.14em}
+
+/* ============ 9. LIGHTBOX ============ */
+.lb{position:fixed;inset:0;z-index:90;display:none;background:rgba(10,11,8,.95)}
+.lb.open{display:flex;align-items:center;justify-content:center}
+.lb-stage{max-width:min(92vw,1150px);display:flex;flex-direction:column;gap:1rem;animation:lbIn .35s cubic-bezier(.2,.7,.2,1)}
+@keyframes lbIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+.lb-imgwrap{position:relative;display:grid;place-items:center;background:var(--ink2);border:1px solid var(--line)}
+.lb-imgwrap img{max-width:100%;max-height:72vh;object-fit:contain;animation:kb 16s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.035)}}
+.lb-spin{position:absolute;width:38px;height:38px;border:3px solid var(--line);border-top-color:var(--yel);border-radius:50%;animation:spin .8s linear infinite;display:none}
+.lb-spin.show{display:block}
+.lb-cap{display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap}
+.lb-cat{flex:none;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;border:1px solid var(--cc,var(--yel));color:var(--cc,var(--yel));padding:.3rem .7rem;border-radius:99px;margin-top:.3rem}
+.lb-meta{display:flex;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.76rem;color:var(--mut);letter-spacing:.08em;margin-top:.4rem}
+.lb-meta span{display:inline-flex;align-items:center;gap:.3rem}
+.lb-cap h2{font-family:var(--disp);font-weight:700;font-size:clamp(1.15rem,2.4vw,1.6rem);line-height:1.2}
+.lb-btn{position:fixed;top:50%;transform:translateY(-50%);width:52px;height:52px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:1.25rem;color:var(--paper);background:rgba(18,19,15,.7);transition:.25s;z-index:92}
+.lb-btn:hover{background:var(--yel);border-color:var(--yel);color:var(--ink);transform:translateY(-50%) scale(1.08)}
+.lb-prev{left:2vw}.lb-next{right:2vw}
+.lb-x{position:fixed;top:1.2rem;right:1.4rem;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;font-size:1.05rem;display:grid;place-items:center;transition:.25s;z-index:92}
+.lb-x:hover{background:var(--red);border-color:var(--red);transform:rotate(90deg)}
+.lb-count{position:fixed;top:1.8rem;left:1.6rem;font-family:var(--mono);font-size:.8rem;color:var(--yel);letter-spacing:.2em;z-index:92}
+body.lock{overflow:hidden}
+
+/* ============ 10. NOISE & RESPONSIVE ============ */
+.noise{position:fixed;inset:-100%;pointer-events:none;z-index:120;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 8s steps(10) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,3%)}}
+
+@media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}.masthead{grid-template-columns:1fr}.mast-side{flex-direction:row;align-items:center;justify-content:flex-start}.badge{display:none}}
+@media(max-width:640px){
+  .grid{grid-template-columns:1fr}
+  .ov{opacity:1;transform:none}
+  .grad{opacity:1}
+  .num{opacity:1;transform:none;color:var(--yel)}
+  .search{margin-left:0;width:100%}
+  .search input{width:100%}
+  .foot-grid{grid-template-columns:1fr}
+  .lb-btn{top:auto;bottom:1.2rem;transform:none;width:58px;height:46px}
+  .lb-btn:hover{transform:scale(1.06)}
+  .lb-prev{left:calc(50% - 70px)}.lb-next{right:calc(50% - 70px)}
+  .lb-imgwrap img{max-height:58vh}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .mask>span{transform:none}
+  .card{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+<!-- MASTHEAD -->
+<header class="wrap masthead">
+  <div>
+    <p class="kicker">🏓 Arsip Tenis Meja · Dokumentasi Lapangan</p>
+    <h1 class="big">
+      <span class="mask"><span id="decode" data-text="GALERI PINGPONG">GALERI PINGPONG</span></span>
+      <span class="mask"><span class="l2">DARI MEJA HIJAU<span class="spark">*</span></span></span>
+    </h1>
+    <p class="lede">Arsip kegiatan tenis meja dari berbagai <strong>turnamen</strong>, <strong>latihan</strong>, dan <strong>komunitas</strong> — setiap bingkai punya cerita lokasi dan tanggal. Klik foto untuk memperbesar, filter berdasarkan kategori atau cari momen favoritmu.</p>
+  </div>
+  <div class="mast-side">
+    <div class="stats mono">
+      <div><span>TOTAL FOTO</span><span id="statFoto">00</span></div>
+      <div><span>KATEGORI</span><span id="statAlbum">00</span></div>
+      <div><span>UPDATE</span><span>08.2026</span></div>
+    </div>
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 100 100"><defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text>
+        <textPath href="#circ">SERVIS · SMASH · POINT ·</textPath></text></svg>
+      <b>🏓</b>
+    </div>
+  </div>
+</header>
+
+<!-- FILMSTRIP -->
+<div class="film" aria-hidden="true">
+  <div class="holes"></div>
+  <div class="film-track" id="filmTrack"></div>
+  <div class="holes"></div>
+</div>
+
+<!-- TOOLBAR: FILTER + PENCARIAN -->
+<nav class="toolbar" aria-label="Filter galeri">
+  <div class="wrap toolbar-in">
+    <div class="chips" id="chips"></div>
+    <div class="search" id="searchBox">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+      <input type="search" id="searchInput" placeholder="Cari album, kota, kategori…" aria-label="Cari foto">
+      <button class="clr" id="searchClear" aria-label="Hapus pencarian">✕</button>
+    </div>
+  </div>
+</nav>
+
+<!-- GRID -->
+<main class="wrap">
+  <div class="sec-head">
+    <h2 id="secTitle">Koleksi Foto</h2>
+    <span class="mono" id="countText"></span>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="empty" id="empty">
+    <span class="big-e">🏓</span>
+    <h3>Bola Keluar Meja</h3>
+    <p>Tidak ditemukan foto yang cocok dengan filter / kata kunci tersebut.</p>
+    <button class="reset-btn" id="resetBtn">RESET FILTER</button>
+  </div>
+
+  <div class="meta-row"><span id="rangeText"></span><span>© ARSIP TENIS MEJA</span></div>
+  <nav class="pager" id="pager" aria-label="Navigasi halaman"></nav>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <h4>Tentang Galeri</h4>
+      <p>Dokumentasi kegiatan tenis meja dari berbagai kota dan turnamen. Ringan, responsif, dan dioptimalkan untuk SEO serta Blogger.</p>
+    </div>
+    <div>
+      <h4>Cara Menambah Foto</h4>
+      <div class="code-hint">
+        PHOTOS.push({<br>
+        &nbsp;&nbsp;album:&nbsp;"Nama Album",<br>
+        &nbsp;&nbsp;category:&nbsp;"Tournament",<br>
+        &nbsp;&nbsp;city:&nbsp;"Jakarta",<br>
+        &nbsp;&nbsp;date:&nbsp;"15 Aug 2026",<br>
+        &nbsp;&nbsp;image:&nbsp;"https://..."<br>
+        });
+      </div>
+    </div>
+    <div>
+      <h4>Kategori</h4>
+      <ul class="mono" id="catList"></ul>
+    </div>
+  </div>
+  <div class="wrap copyright"><span id="footYear"></span><span>GAME TO 11, MEMORIES FOREVER</span></div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Pratinjau foto">
+  <span class="lb-count"><span id="lbNow">1</span> / <span id="lbTotal">1</span></span>
+  <button class="lb-x" id="lbClose" aria-label="Tutup (Esc)">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Foto sebelumnya (←)">←</button>
+  <figure class="lb-stage" id="lbStage">
+    <div class="lb-imgwrap"><div class="lb-spin" id="lbSpin"></div><img id="lbImg" alt="" title=""></div>
+    <figcaption class="lb-cap">
+      <div>
+        <span class="lb-cat" id="lbCat"></span>
+        <h2 id="lbTitle"></h2>
+        <div class="lb-meta">
+          <span id="lbCity"></span>
+          <span id="lbDate"></span>
+        </div>
+      </div>
+    </figcaption>
+  </figure>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Foto berikutnya (→)">→</button>
+</div>
+
+<script>
+//<![CDATA[
+/* ============================================================
+   ⬇️⬇️⬇️  TAMBAH / EDIT FOTO DI SINI  ⬇️⬇️⬇️
+   Cukup copy satu blok { ... } lalu ganti isinya.
+   image = URL foto (blogger, imgur, drive, dll)
+   category = akan otomatis muncul di filter
+   ============================================================ */
+const PHOTOS = [
+  /* ====== TEMPAT URL GRAHA NINE CARE 2026 ====== */
+  {album:"Suwaji Edit ", category:"Tournament", city:"Sidoarjo",     date:"26 July 2026",   
+   image:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4CU2cvXstBbFVwSSkcEj9xmBZeMiTDzlyvGPYn_xVw2ta1D7g3DGWOXCTd6Os2I67KcTb5oYdHM6DjChFCPiH_kXtXS9D8dZhyk5BwGNPdv0OLGsyHqrTaY-VWqj1gkcj892eunQu9IMC-n7toF2svn9jUtqkt4vOsoRTgB0HJtVMFtSLqer4YnlX1W4/s1672/Pak%20Lurah%20Thumbnail.png  "},
+  {album:"Graha Nine Care 2026", category:"Tournament", city:"Malang",     date:"26 July 2026",
+      image:"https://suwajiwn-lang.github.io/Galeri/Gambar2/suwaji1.jpeg "},
+  {album:"Graha Nine Care 2026", category:"Tournament", city:"Malang",     date:"27 July 2026",    image:"https://picsum.photos/seed/gra-3/1280/960"},
+  {album:"Graha Nine Care 2026", category:"Tournament", city:"Malang",     date:"27 July 2026",    image:"https://picsum.photos/seed/gra-4/1280/960"},
+  {album:"Graha Nine Care 2026", category:"Tournament", city:"Malang",     date:"27 July 2026",    image:"https://picsum.photos/seed/gra-5/1280/960"},
+
+  /* ====== OPEN CHAMPIONSHIP SURABAYA ====== */
+  {album:"Open Championship",     category:"Tournament", city:"Surabaya",   date:"10 August 2026",  image:"https://picsum.photos/seed/opc-1/1280/960"},
+  {album:"Open Championship",     category:"Tournament", city:"Surabaya",   date:"10 August 2026",  image:"https://picsum.photos/seed/opc-2/1280/960"},
+  {album:"Open Championship",     category:"Tournament", city:"Surabaya",   date:"11 August 2026",  image:"https://picsum.photos/seed/opc-3/1280/960"},
+  {album:"Open Championship",     category:"Tournament", city:"Surabaya",   date:"11 August 2026",  image:"https://picsum.photos/seed/opc-4/1280/960"},
+
+  /* ====== LATIHAN RUTIN GOR ====== */
+  {album:"Latihan Rutin GOR",     category:"Practice",   city:"Malang",     date:"Setiap Jumat",    image:"https://picsum.photos/seed/lat-1/1280/960"},
+  {album:"Latihan Rutin GOR",     category:"Practice",   city:"Malang",     date:"Setiap Jumat",    image:"https://picsum.photos/seed/lat-2/1280/960"},
+  {album:"Latihan Rutin GOR",     category:"Practice",   city:"Malang",     date:"Setiap Jumat",    image:"https://picsum.photos/seed/lat-3/1280/960"},
+
+  /* ====== SPARRING KLUB ====== */
+  {album:"Sparring Antar Klub",   category:"Friendly",   city:"Batu",       date:"03 August 2026",  image:"https://picsum.photos/seed/sp-1/1280/960"},
+  {album:"Sparring Antar Klub",   category:"Friendly",   city:"Batu",       date:"03 August 2026",  image:"https://picsum.photos/seed/sp-2/1280/960"},
+  {album:"Sparring Antar Klub",   category:"Friendly",   city:"Batu",       date:"03 August 2026",  image:"https://picsum.photos/seed/sp-3/1280/960"},
+
+  /* ====== KEGIATAN KOMUNITAS ====== */
+  {album:"Klinik Pemula",         category:"Community",  city:"Malang",     date:"15 June 2026",    image:"https://picsum.photos/seed/kom-1/1280/960"},
+  {album:"Klinik Pemula",         category:"Community",  city:"Malang",     date:"15 June 2026",    image:"https://picsum.photos/seed/kom-2/1280/960"},
+  {album:"Gathering Tahunan",     category:"Community",  city:"Pasuruan",   date:"22 December 2025",image:"https://picsum.photos/seed/kom-3/1280/960"},
+  {album:"Gathering Tahunan",     category:"Community",  city:"Pasuruan",   date:"22 December 2025",image:"https://picsum.photos/seed/kom-4/1280/960"},
+  {album:"Gathering Tahunan",     category:"Community",  city:"Pasuruan",   date:"22 December 2025",image:"https://picsum.photos/seed/kom-5/1280/960"}
+];
+
+const PER_PAGE = 8;
+const CATEGORY_COLORS = ["#FF4D2E","#FFC53D","#3DD6A3","#8AB8FF","#C792EA","#F78C6C","#FFCB6B","#89DDFF"];
+const CATEGORY_EMOJI  = {Tournament:"🏆", Practice:"🏓", Friendly:"🤝", Community:"👥", Exhibition:"🎪", Coaching:"🎓"};
+/* ============================================================ */
+
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s??'').replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const state = {cat:"all", q:"", page:1};
+
+/* ---------- AUTO BUILD CATEGORY MAP ---------- */
+const CATS = {};
+(function(){
+  const unique = [...new Set(PHOTOS.map(p=>p.category))];
+  unique.forEach((name,i)=>{
+    CATS[name] = {
+      label:name,
+      emoji: CATEGORY_EMOJI[name] || "📷",
+      color: CATEGORY_COLORS[i % CATEGORY_COLORS.length]
+    };
+  });
+})();
+
+/* ---------- TICKER ---------- */
+(function(){
+  const items = ["🏓 TENIS MEJA", ...Object.values(CATS).map(c=>c.emoji+" "+c.label.toUpperCase()), "✦ KLIK FOTO UNTUK MEMPERBESAR"];
+  const half = items.map(t=>"<span>"+t+"</span>").join("");
+  $("#ticker").innerHTML = half + half;
+})();
+
+/* ---------- FILMSTRIP ---------- */
+(function(){
+  const frames = PHOTOS.map(p=>'<div class="frame"><img src="'+esc(p.image)+'" alt="" loading="lazy"></div>').join("");
+  $("#filmTrack").innerHTML = frames + frames;
+})();
+
+/* ---------- DECODE TITLE ---------- */
+(function(){
+  const el = $("#decode"); if(RM) return;
+  const target = el.dataset.text, glyphs = "█▓▒░<>/#01✦*";
+  let frame = 0;
+  const iv = setInterval(()=>{
+    frame++;
+    el.textContent = target.split("").map((ch,i)=> i < frame/2.2 ? ch : glyphs[Math.floor(Math.random()*glyphs.length)]).join("");
+    if(frame/2.2 >= target.length){ el.textContent = target; clearInterval(iv); }
+  }, 42);
+})();
+
+/* ---------- COUNT-UP STATS ---------- */
+(function(){
+  const anim = (el,val)=>{
+    if(RM){ el.textContent = String(val).padStart(2,"0"); return; }
+    let n = 0; const step = Math.max(1, Math.round(val/24));
+    const iv = setInterval(()=>{ n = Math.min(val, n+step); el.textContent = String(n).padStart(2,"0"); if(n>=val) clearInterval(iv); }, 45);
+  };
+  anim($("#statFoto"), PHOTOS.length);
+  anim($("#statAlbum"), Object.keys(CATS).length);
+})();
+
+/* ---------- AUTO BUILD FILTER CHIPS ---------- */
+(function(){
+  const chips = $("#chips");
+  const allCount = PHOTOS.length;
+  let html = '<button class="chip is-on" data-cat="all"><span class="dot"></span>✳ Semua <em>('+allCount+')</em></button>';
+  Object.entries(CATS).forEach(([key,c])=>{
+    const count = PHOTOS.filter(p=>p.category===key).length;
+    html += '<button class="chip" data-cat="'+esc(key)+'" style="--cc:'+c.color+'"><span class="dot"></span>'+c.emoji+' '+esc(c.label)+' <em>('+count+')</em></button>';
+  });
+  chips.innerHTML = html;
+  chips.querySelectorAll(".chip").forEach(ch=>ch.addEventListener("click",()=>{
+    chips.querySelectorAll(".chip").forEach(c=>c.classList.remove("is-on"));
+    ch.classList.add("is-on");
+    state.cat = ch.dataset.cat; state.page = 1; render();
+  }));
+})();
+
+/* ---------- CAT LIST DI FOOTER ---------- */
+(function(){
+  $("#catList").innerHTML = Object.values(CATS).map(c=>'<li>'+c.emoji+' '+esc(c.label)+'</li>').join("");
+})();
+
+/* ---------- FILTER & RENDER ---------- */
+function filtered(){
+  const q = state.q.trim().toLowerCase();
+  return PHOTOS.filter(p=>{
+    const okCat = state.cat==="all" || p.category===state.cat;
+    if(!okCat) return false;
+    if(!q) return true;
+    const hay = [p.album, p.category, p.city, p.date].filter(Boolean).join(" ").toLowerCase();
+    return hay.includes(q);
+  });
+}
+
+let revealIO = null;
+function render(){
+  const list = filtered();
+  const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+  state.page = Math.min(state.page, totalPages) || 1;
+  const start = (state.page-1)*PER_PAGE;
+  const slice = list.slice(start, start+PER_PAGE);
+  const grid = $("#grid");
+
+  grid.innerHTML = slice.map((p,i)=>{
+    const c = CATS[p.category] || {label:p.category, emoji:"📷", color:"#FFC53D"};
+    const no = String(start+i+1).padStart(2,"0");
+    const meta = [p.city, p.date].filter(Boolean).map(x=>'<span>'+esc(x)+'</span>').join("");
+    return '<article class="card" tabindex="0" role="button" data-i="'+i+'" aria-label="Perbesar: '+esc(p.album)+'">'
+      +'<div class="ph">'
+      +'<span class="num">№ '+no+'</span>'
+      +'<span class="tag" style="--cc:'+c.color+'">'+c.emoji+' '+esc(c.label)+'</span>'
+      +'<img src="'+esc(p.image)+'" alt="'+esc(c.label+' - '+p.album+(p.city?' di '+p.city:''))+'" loading="lazy" decoding="async" onload="this.classList.add(\'ok\')">'
+      +'<div class="grad"></div>'
+      +'<div class="ov"><strong>'+esc(p.album)+'</strong><div class="meta">'+meta+'</div></div>'
+      +'</div></article>';
+  }).join("");
+
+  if(revealIO) revealIO.disconnect();
+  revealIO = new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add("in"); revealIO.unobserve(e.target); }
+  }), {threshold:.12});
+  grid.querySelectorAll(".card").forEach((card,i)=>{
+    card.style.transitionDelay = RM ? "0s" : (i%4)*70+"ms";
+    revealIO.observe(card);
+    card.addEventListener("click", ()=>openLB(i));
+    card.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openLB(i);} });
+  });
+
+  $("#empty").classList.toggle("show", list.length===0);
+  const filterNote = (state.cat!=="all"||state.q) ? " · filter: "+(state.cat!=="all"?CATS[state.cat]?.label||state.cat:"")+(state.q?' "'+state.q+'"':"") : "";
+  $("#countText").textContent = list.length+" FOTO"+filterNote;
+  $("#rangeText").textContent = list.length ? "MENAMPILKAN "+(start+1)+"–"+Math.min(start+PER_PAGE,list.length)+" DARI "+list.length+" FOTO" : "0 HASIL";
+  $("#secTitle").textContent = state.cat==="all" ? "Koleksi Foto" : (CATS[state.cat]?.emoji+" "+CATS[state.cat]?.label) || state.cat;
+
+  renderPager(list, totalPages);
+  currentList = slice;
+}
+
+function renderPager(list, totalPages){
+  const pager = $("#pager");
+  if(totalPages<=1){ pager.innerHTML=""; return; }
+  const cur = state.page;
+  const set = new Set([1,totalPages,cur-1,cur,cur+1]);
+  const pages = [...set].filter(p=>p>=1&&p<=totalPages).sort((a,b)=>a-b);
+  let html = '<button class="pg" data-go="'+(cur-1)+'" '+(cur===1?"disabled":"")+' aria-label="Sebelumnya">←</button>';
+  let prev = 0;
+  for(const p of pages){
+    if(p-prev>1) html += '<span class="pg-gap">…</span>';
+    html += '<button class="pg '+(p===cur?"is-cur":"")+'" data-go="'+p+'" '+(p===cur?'aria-current="page"':"")+'>'+p+'</button>';
+    prev = p;
+  }
+  html += '<button class="pg" data-go="'+(cur+1)+'" '+(cur===totalPages?"disabled":"")+' aria-label="Berikutnya">→</button>';
+  pager.innerHTML = html;
+  pager.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>{
+    state.page = +b.dataset.go; render();
+    $(".sec-head").scrollIntoView({behavior: RM ? "auto" : "smooth"});
+  }));
+}
+
+/* ---------- PENCARIAN ---------- */
+const sInput = $("#searchInput"); let debounce;
+sInput.addEventListener("input", ()=>{
+  clearTimeout(debounce);
+  $("#searchBox").classList.toggle("has", sInput.value.length>0);
+  debounce = setTimeout(()=>{ state.q = sInput.value; state.page = 1; render(); }, 180);
+});
+$("#searchClear").addEventListener("click", ()=>{
+  sInput.value = ""; state.q = ""; state.page = 1;
+  $("#searchBox").classList.remove("has"); render(); sInput.focus();
+});
+$("#resetBtn").addEventListener("click", ()=>{
+  sInput.value=""; state.q=""; state.cat="all"; state.page=1;
+  document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("is-on", c.dataset.cat==="all"));
+  $("#searchBox").classList.remove("has"); render();
+});
+
+/* ---------- LIGHTBOX ---------- */
+const lb=$("#lb"), lbImg=$("#lbImg"), lbSpin=$("#lbSpin");
+let currentList=[], lbIdx=0, lastFocus=null;
+
+function openLB(i){
+  currentList = filtered().slice((state.page-1)*PER_PAGE, state.page*PER_PAGE);
+  lbIdx = i; lastFocus = document.activeElement;
+  lb.classList.add("open"); document.body.classList.add("lock");
+  setLB(); $("#lbClose").focus();
+}
+function setLB(){
+  const p = currentList[lbIdx];
+  const c = CATS[p.category] || {label:p.category, emoji:"📷", color:"#FFC53D"};
+  lbSpin.classList.add("show");
+  lbImg.onload = lbImg.onerror = ()=>lbSpin.classList.remove("show");
+  lbImg.src = p.image;
+  lbImg.alt = c.label+" - "+p.album+(p.city?" di "+p.city:"");
+  lbImg.title = p.album;
+  $("#lbTitle").textContent = p.album;
+  const cat = $("#lbCat"); cat.textContent = c.emoji+" "+c.label; cat.style.setProperty("--cc", c.color);
+  $("#lbCity").textContent = p.city ? "📍 "+p.city : "";
+  $("#lbDate").textContent = p.date ? "📅 "+p.date : "";
+  $("#lbCity").style.display = p.city ? "" : "none";
+  $("#lbDate").style.display = p.date ? "" : "none";
+  $("#lbNow").textContent = lbIdx+1; $("#lbTotal").textContent = currentList.length;
+  // preload tetangga
+  [(lbIdx+1)%currentList.length,(lbIdx-1+currentList.length)%currentList.length]
+    .forEach(n=>{ const im=new Image(); im.src=currentList[n].image; });
+}
+function closeLB(){ lb.classList.remove("open"); document.body.classList.remove("lock"); if(lastFocus) lastFocus.focus(); }
+const nav = d => { lbIdx = (lbIdx + d + currentList.length) % currentList.length; setLB(); };
+
+$("#lbClose").addEventListener("click", closeLB);
+$("#lbPrev").addEventListener("click", ()=>nav(-1));
+$("#lbNext").addEventListener("click", ()=>nav(1));
+lb.addEventListener("click", e=>{ if(e.target===lb) closeLB(); });
+document.addEventListener("keydown", e=>{
+  if(!lb.classList.contains("open")) return;
+  if(e.key==="Escape") closeLB();
+  if(e.key==="ArrowLeft") nav(-1);
+  if(e.key==="ArrowRight") nav(1);
+});
+let tX=null;
+lb.addEventListener("touchstart", e=>{ tX=e.touches[0].clientX; }, {passive:true});
+lb.addEventListener("touchend", e=>{
+  if(tX===null) return;
+  const d = e.changedTouches[0].clientX - tX;
+  if(Math.abs(d)>45) nav(d>0?-1:1);
+  tX=null;
+}, {passive:true});
+
+/* ---------- INIT ---------- */
+$("#footYear").textContent = "© 2026 ARSIP TENIS MEJA · DIBUAT DENGAN ♥";
+render();
+//]]>
+</script>
+</body>
+</html>
